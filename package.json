@@ -1,0 +1,29 @@
+{
+  "name": "uta-bc10-teamprofilegenerator",
+  "version": "1.0.0",
+  "description": "Generates a custom team profile using node and user input.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Crothos/UTA-BC10-TeamProfileGenerator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Crothos/UTA-BC10-TeamProfileGenerator/issues"
+  },
+  "homepage": "https://github.com/Crothos/UTA-BC10-TeamProfileGenerator#readme",
+  "dependencies": {
+    "inquirer": "^8.2.4"
+  },
+  "devDependencies": {
+    "jest": "^29.4.0"
+  }
+}
