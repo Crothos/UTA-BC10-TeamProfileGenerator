@@ -71,17 +71,17 @@ const startPrompt = () => {
 const promptSelect = () => {
     return inquirer.prompt([
         {
-            type: 'checkbox',
+            type: 'list',
             message: 'Which role would you like to add to the team?',
             name: 'role',
             choices: ['Engineer', 'Intern', 'Team is complete']
         }
-    ]).then(choice => {
-        switch (choice.menu) {
-            case "Engineer":
+    ]).then(choices => {
+        switch (choices.role) {
+            case 'Engineer':
                 promptEngineer();
                 break;
-            case "Intern":
+            case 'Intern':
                 promptIntern();
                 break;
             default:
