@@ -4,6 +4,7 @@ const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 const generateHTML = require('./lib/generateHTML');
 const fs = require('fs');
+const { start } = require('repl');
 const team = [];
 
 const startPrompt = () => {
@@ -88,3 +89,128 @@ const promptSelect = () => {
         }
     })
 };
+
+const promptEngineer = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            message: "What is your engineer's name?",
+            name: "name",
+            validate: engineerName => {
+                if(engineerName) {
+                    return true;
+                } else {
+                    console.log("Engineer name is required!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            message: "What is your engineer's employee ID?",
+            name: 'employeeId',
+            validate: employeeId => {
+                if (employeeId) {
+                    return true;
+                } else {
+                    console.log("Employee ID is required!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            message: "What is your engineer's email address?",
+            name: 'email',
+            validate: email => {
+                if (email) {
+                    return true;
+                } else {
+                    console.log("Email is required!")
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            message: "What is your engineer's GitHub user name?",
+            name: 'gitName',
+            validate: gitName => {
+                if (gitName) {
+                    return true;
+                } else {
+                    console.log("GitHub username is required!");
+                    return false;
+                }
+            }
+        },
+    ]).then (data => {
+        const engineer = new Engineer(data.name, data.employeeId, data.email, data.gitName);
+        team.push(engineer);
+        promptSelect();
+    })
+};
+
+const promptIntern = () => {
+    return inquirer.prompt([
+        {
+            type: 'input',
+            message: "What is your intern's name?",
+            name: "name",
+            validate: internName => {
+                if(internName) {
+                    return true;
+                } else {
+                    console.log("Intern name is required!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            message: "What is your intern's employee ID?",
+            name: 'employeeId',
+            validate: employeeId => {
+                if (employeeId) {
+                    return true;
+                } else {
+                    console.log("Employee ID is required!");
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            message: "What is your intern's email address?",
+            name: 'email',
+            validate: email => {
+                if (email) {
+                    return true;
+                } else {
+                    console.log("Email is required!")
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'input',
+            message: "What's the name of your intern's school?",
+            name: 'school',
+            validate: school => {
+                if (school) {
+                    return true;
+                } else {
+                    console.log("Intern's school is required!");
+                    return false;
+                }
+            }
+        },
+    ]).then (data => {
+        const intern = new Intern(data.name, data.employeeId, data.email, data.school);
+        team.push(intern);
+        promptSelect();
+    })
+
+};
+startPrompt();
+const buildTeam = () => console.log(team);
