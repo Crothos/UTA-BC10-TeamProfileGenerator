@@ -4,6 +4,7 @@ const Intern = require('./lib/Intern');
 const Engineer = require('./lib/Engineer');
 const generateHTML = require('./lib/generateHTML');
 const fs = require('fs');
+const { start } = require('repl');
 const team = [];
 
 const startPrompt = () => {
@@ -211,5 +212,14 @@ const promptIntern = () => {
     })
 
 };
+
+function writeToFile(data) {
+    console.log(data);
+    fs.writeFile("customindex.html", generateHTML(team), err => console.log(err));
+}
+
+const buildTeam = () => {
+    console.log(team[0].name);
+    writeToFile();
+}
 startPrompt();
-const buildTeam = () => console.log(team);
