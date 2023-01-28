@@ -218,7 +218,7 @@ function writeToFile(data) {
 }
 
 const buildTeam = () => {
-    console.log(team[0].name);
+    console.log(team);
     writeToFile();
 }
 startPrompt();
