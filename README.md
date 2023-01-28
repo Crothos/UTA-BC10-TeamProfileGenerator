@@ -17,7 +17,7 @@ Using node input, create a custom webpage displaying your dev team.
 
 ## Usage
 When index.js is run in node, a series of questions will appear one at a time. Answer the questions in the terminal, and use the keyboard to create your dev team. When you're done, a custom HTML page is created displaying cards with your team members, their job, and associated information!
-- [Watch the app in action (VIDEO)](https://drive.google.com/??????????????????????????)
+- [Watch the app in action (VIDEO)](https://drive.google.com/file/d/1mUp4xF8kW01eOq9CBcv3Brj8in8W_I03/view)
 
 ## Installation
 - [Requires node installation.](https://nodejs.org/en/download/)
