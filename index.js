@@ -212,13 +212,11 @@ const promptIntern = () => {
 
 };
 
-function writeToFile(data) {
-    console.log(data);
-    fs.writeFile("customindex.html", generateHTML(team), err => console.log(err));
+function writeToFile() {
+    fs.writeFile("./dist/customindex.html", generateHTML(team), err => console.log(err));
 }
 
 const buildTeam = () => {
-    console.log(team);
     writeToFile();
 }
 startPrompt();
