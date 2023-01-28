@@ -1,4 +1,4 @@
-function generateHTML(team) {
+const generateHTML = team => {
     return `<!DOCTYPE html>
     <html lang="en">
     <head>
