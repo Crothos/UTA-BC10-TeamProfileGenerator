@@ -15,7 +15,7 @@ const generateHTML = (team) => {
                 generateIntern(team[i]);
                 }
                 console.log(htmlBlock);
-                htmlBlock.join("");
+                //htmlBlock.join("");
         }
     }
     generateCards(team);
@@ -29,11 +29,12 @@ const generateHTML = (team) => {
     </head>
     <body>
         <header id="header">My Team</header>
-        <div id="cardcontainer">${htmlBlock}</div>
+        <div id="cardcontainer">${htmlBlock.join("")}</div>
     </body>
     </html>
     `;
 };
+
 const generateManager = manager => {
     let managerBlock = `
     <div class="card">
