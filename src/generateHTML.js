@@ -60,7 +60,7 @@ const generateEngineer = engineer => {
         <h3>Name: ${engineer.name}</h3>
         <h3>Employee ID: ${engineer.id}
         <h3>Email: <a href="mailto:${engineer.email}">${engineer.email}</a></h3>
-        <h3>GitHub Profile: ${engineer.github}</h3>
+        <h3>GitHub Profile: <a href="https://github.com/${engineer.github}">${engineer.github}</a></h3>
     </div>
     </div>
     `;
