@@ -54,7 +54,7 @@ const generateManager = manager => {
 const generateEngineer = engineer => {
     let engineerBlock = `
     <div class="card">
-    <img class="card-img-top" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-glasses-outline-512.png" alt="Card image cap" style="width:50px;height:50px" >
+    <img class="card-img-top" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-gear-512.png" alt="Card image cap" style="width:50px;height:50px" >
     <div class="card-body">
         <h2>Engineer</h2>
         <h3>Name: ${engineer.name}</h3>
@@ -70,7 +70,7 @@ const generateEngineer = engineer => {
 const generateIntern = intern => {
     let internBlock = `
     <div class="card">
-    <img class="card-img-top" src="https://cdn4.iconfinder.com/data/icons/ionicons/512/icon-ios7-glasses-outline-512.png" alt="Card image cap" style="width:50px;height:50px" >
+    <img class="card-img-top" src="https://cdn-icons-png.flaticon.com/512/43/43517.png" alt="Card image cap" style="width:50px;height:50px" >
     <div class="card-body">
         <h2>Intern</h2>
         <h3>Name: ${intern.name}</h3>
