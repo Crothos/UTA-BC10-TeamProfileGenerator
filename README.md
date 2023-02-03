@@ -28,7 +28,7 @@ When index.js is run in node, a series of questions will appear one at a time. A
 - [Requires jest testing framework installation.](https://jestjs.io/docs/getting-started)
 
 ## Contribution
-No other contributors.
+- [Karen Peazzoni](https://github.com/kpeazzoni)
 
 ## Questions
 ### Send questions to this email:
